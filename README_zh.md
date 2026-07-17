@@ -83,7 +83,7 @@ Burp 的 Extensions / Errors 面板也是空的。
 ```
 gradle jar
 ```
-把 `build/libs` 目录下的 `burphistory2pcap.jar` 导入 Burp Suite。
+把 `build/libs` 目录下的 `BurpHistory2Pcap.jar` 导入 Burp Suite。
 
 ### 用 Maven 构建
 
@@ -91,6 +91,20 @@ gradle jar
 mvn package
 ```
 把 `target` 目录下的 `burphistory2pcap-1.0.0.jar` 导入 Burp Suite。
+
+### 使用 GitHub Actions 手动触发打包并发布 Release
+
+仓库已内置 `.github/workflows/release.yml`，可手动触发发布。
+
+1. 打开 **GitHub → Actions → Manual Release → Run workflow**
+2. 填写参数：
+   - `tag`（必填，例如 `v1.0.1`）
+   - `release_name`（可选）
+   - `prerelease`（可选）
+   - `generate_release_notes`（可选）
+3. 点击运行
+
+该工作流会构建 `build/libs/BurpHistory2Pcap.jar` 并上传到 GitHub Release。
 
 ## 使用方法
 
@@ -132,4 +146,3 @@ Export started: 1 message(s) -> /Users/me/out.pcap (forcePort80=true, useRealIPs
   [1/1] host=cip.cc status=200
 Export complete: 10 packet(s) written to /Users/me/out.pcap
 ```
-

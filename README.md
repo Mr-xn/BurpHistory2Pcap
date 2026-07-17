@@ -95,7 +95,7 @@ Gradle build command:
 ```
 gradle jar
 ```
-Import `burphistory2pcap.jar` file located in `build/libs` folder to Burp suite.
+Import `BurpHistory2Pcap.jar` file located in `build/libs` folder to Burp suite.
 
 ### Build using Maven
 
@@ -104,6 +104,20 @@ Maven build command:
 mvn package
 ```
 Import `burphistory2pcap-1.0.0.jar` file located in `target` folder to Burp suite.
+
+### Build and publish Release using GitHub Actions (manual trigger)
+
+This repository includes `.github/workflows/release.yml` for manual release publishing.
+
+1. Open **GitHub → Actions → Manual Release → Run workflow**
+2. Fill in:
+   - `tag` (required, e.g. `v1.0.1`)
+   - `release_name` (optional)
+   - `prerelease` (optional)
+   - `generate_release_notes` (optional)
+3. Run the workflow
+
+The workflow builds `build/libs/BurpHistory2Pcap.jar` and uploads it to GitHub Release.
 
 ## Usage
 
@@ -147,4 +161,3 @@ Export started: 1 message(s) -> /Users/me/out.pcap (forcePort80=true, useRealIPs
   [1/1] host=cip.cc status=200
 Export complete: 10 packet(s) written to /Users/me/out.pcap
 ```
-
