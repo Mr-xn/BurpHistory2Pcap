@@ -92,6 +92,20 @@ mvn package
 ```
 把 `target` 目录下的 `burphistory2pcap-1.0.0.jar` 导入 Burp Suite。
 
+### 使用 GitHub Actions 手动触发打包并发布 Release
+
+仓库已内置 `.github/workflows/release.yml`，可手动触发发布。
+
+1. 打开 **GitHub → Actions → Manual Release → Run workflow**
+2. 填写参数：
+   - `tag`（必填，例如 `v1.0.1`）
+   - `release_name`（可选）
+   - `prerelease`（可选）
+   - `generate_release_notes`（可选）
+3. 点击运行
+
+该工作流会构建 `build/libs/burphistory2pcap.jar` 并上传到 GitHub Release。
+
 ## 使用方法
 
 在 Proxy 下的 HTTP History 标签页选中要导出的记录（Ctrl + A 全选），右键打开上下文菜单，选择：
@@ -132,4 +146,3 @@ Export started: 1 message(s) -> /Users/me/out.pcap (forcePort80=true, useRealIPs
   [1/1] host=cip.cc status=200
 Export complete: 10 packet(s) written to /Users/me/out.pcap
 ```
-
