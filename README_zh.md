@@ -83,7 +83,7 @@ Burp 的 Extensions / Errors 面板也是空的。
 ```
 gradle jar
 ```
-把 `build/libs` 目录下的 `burphistory2pcap.jar` 导入 Burp Suite。
+把 `build/libs` 目录下的 `BurpHistory2Pcap.jar` 导入 Burp Suite。
 
 ### 用 Maven 构建
 
@@ -104,7 +104,7 @@ mvn package
    - `generate_release_notes`（可选）
 3. 点击运行
 
-该工作流会构建 `build/libs/burphistory2pcap.jar` 并上传到 GitHub Release。
+该工作流会构建 `build/libs/BurpHistory2Pcap.jar` 并上传到 GitHub Release。
 
 ## 使用方法
 

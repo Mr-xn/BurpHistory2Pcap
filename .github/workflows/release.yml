@@ -52,4 +52,4 @@ jobs:
           prerelease: ${{ inputs.prerelease }}
           generate_release_notes: ${{ inputs.generate_release_notes }}
           files: |
-            build/libs/burphistory2pcap.jar
+            build/libs/BurpHistory2Pcap.jar

@@ -95,7 +95,7 @@ Gradle build command:
 ```
 gradle jar
 ```
-Import `burphistory2pcap.jar` file located in `build/libs` folder to Burp suite.
+Import `BurpHistory2Pcap.jar` file located in `build/libs` folder to Burp suite.
 
 ### Build using Maven
 
@@ -117,7 +117,7 @@ This repository includes `.github/workflows/release.yml` for manual release publ
    - `generate_release_notes` (optional)
 3. Run the workflow
 
-The workflow builds `build/libs/burphistory2pcap.jar` and uploads it to GitHub Release.
+The workflow builds `build/libs/BurpHistory2Pcap.jar` and uploads it to GitHub Release.
 
 ## Usage
 
